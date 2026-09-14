@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>North Star Bakery - Home</title>
+    <title>North Star Bakery - Contact & Pre-Order</title>
     <!-- Google Fonts for typography -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <!-- Link to external stylesheet -->
@@ -25,15 +25,17 @@
         <h2>Get in Touch or Place a Pre-Order</h2>
         <p>Fill out the form below to request a pre-order or ask a general question. No online payment required—pay upon pickup!</p>
 
-        <form action="#" method="POST">
+        <form id="contactForm" action="#" method="POST" novalidate>
             <fieldset>
                 <legend>Customer Information and Request Details</legend>
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" name="name">
+                <span id="nameError" style="color: red; font-size: 0.9em; display: block; margin-bottom: 10px;"></span>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="emailInput">Email:</label>
+                <input type="text" id="emailInput" name="email">
+                <span id="emailError" style="color: red; font-size: 0.9em; display: block; margin-bottom: 10px;"></span>
 
                 <label for="pickup-date">Pickup Date:</label>
                 <input type="date" id="pickup-date" name="pickup-date" required>
@@ -62,5 +64,7 @@
     <footer>
         <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
